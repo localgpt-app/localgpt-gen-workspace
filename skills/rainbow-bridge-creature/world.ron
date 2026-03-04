@@ -2,7 +2,7 @@
     version: 1,
     meta: (
         name: "rainbow-bridge-creature",
-        description: Some("A whimsical 3D scene featuring an adorable fluffy creature bounding across vibrant rainbow bridges (flattened cubes) connecting floating islands in a fantastical landscape. Includes floating islands, glowing flowers, drifting clouds, and magical sparkles. All elements are animated for a dynamic, living scene. The creature\'s body parts move together along the bridge paths."),
+        description: Some("A whimsical 3D scene featuring an adorable fluffy creature bounding across vibrant rainbow bridges (flattened cubes) connecting floating islands in a fantastical landscape. Includes floating islands, glowing flowers, drifting clouds, and magical sparkles. All elements are animated for a dynamic, living scene. The creature\'s body parts move together along the bridge paths using local coordinates. Subtle nature ambience (gentle wind, forest sounds) included."),
     ),
     environment: Some((
         background_color: Some((0.5, 0.7, 1.0, 1.0)),
@@ -10,8 +10,8 @@
         ambient_color: Some((0.99999994, 0.99999994, 0.99999994, 1.0)),
     )),
     camera: Some((
-        position: (-25.308527, 11.167127, -18.487759),
-        look_at: (-18.110554, 8.264713, -12.181864),
+        position: (-2.2011065, 7.0794115, -23.088518),
+        look_at: (-3.3074737, 5.9073114, -13.219292),
         fov_degrees: 45.0,
     )),
     entities: [
@@ -21,7 +21,7 @@
             transform: (
                 position: (-1.0, 5.3, 0.8),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (0.7454423, 0.7454423, 0.7454423),
+                scale: (1.1679623, 1.1679623, 1.1679623),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -66,7 +66,7 @@
             id: (26),
             name: ("cloud_1"),
             transform: (
-                position: (-5.0, 8.147968, 3.0),
+                position: (-5.0, 7.8176355, 3.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -115,7 +115,7 @@
             id: (16),
             name: ("creature_leg_bl"),
             transform: (
-                position: (-8.35505, 3.5610864, 5.1670146),
+                position: (-0.3, -0.3, 0.3),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -136,7 +136,7 @@
             id: (22),
             name: ("island_3"),
             transform: (
-                position: (2.0, 1.6840782, 6.0),
+                position: (2.0, 1.463778, 6.0),
                 rotation_degrees: (180.0, 0.0, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -164,7 +164,7 @@
             id: (13),
             name: ("creature_ear_right"),
             transform: (
-                position: (-8.670097, 4.754264, 5.2615137),
+                position: (0.4, 0.5, -0.2),
                 rotation_degrees: (-11.373347, 14.960512, 20.581226),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -187,7 +187,7 @@
             transform: (
                 position: (8.0, 0.5, -4.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (0.92053986, 0.92053986, 0.92053986),
+                scale: (1.0434184, 1.0434184, 1.0434184),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -213,7 +213,7 @@
             transform: (
                 position: (-5.0, 6.0, 1.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (0.682071, 0.682071, 0.682071),
+                scale: (0.9942956, 0.9942956, 0.9942956),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -237,7 +237,7 @@
             id: (17),
             name: ("creature_leg_br"),
             transform: (
-                position: (-8.455866, 3.6184733, 4.8188596),
+                position: (-0.3, -0.3, -0.3),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -281,7 +281,7 @@
             transform: (
                 position: (0.0, 5.6, -1.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (1.4898751, 1.4898751, 1.4898751),
+                scale: (1.3220153, 1.3220153, 1.3220153),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -322,7 +322,7 @@
             id: (20),
             name: ("island_1"),
             transform: (
-                position: (-8.0, 0.33949503, 5.0),
+                position: (-8.0, 0.1440196, 5.0),
                 rotation_degrees: (180.0, 0.0, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -367,7 +367,7 @@
             id: (18),
             name: ("creature_tail"),
             transform: (
-                position: (-8.077808, 4.073131, 4.88103),
+                position: (-0.6, 0.0, 0.0),
                 rotation_degrees: (9.36005, 15.94539, -44.999996),
                 scale: (0.91743106, 0.91743106, 0.91743106),
                 visible: true,
@@ -390,7 +390,7 @@
             transform: (
                 position: (-8.5, 1.8, 4.5),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (1.4285356, 1.4285356, 1.4285356),
+                scale: (1.2533182, 1.2533182, 1.2533182),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -416,7 +416,7 @@
             transform: (
                 position: (-3.0, 5.5, 1.5),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (0.9529485, 0.9529485, 0.9529485),
+                scale: (0.5330918, 0.5330918, 0.5330918),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -442,7 +442,7 @@
             transform: (
                 position: (-2.0, 5.8, -0.5),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (1.92943, 1.92943, 1.92943),
+                scale: (1.4657422, 1.4657422, 1.4657422),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -466,7 +466,7 @@
             id: (19),
             name: ("creature_nose"),
             transform: (
-                position: (-8.531477, 4.177487, 5.658161),
+                position: (0.7, 0.2, 0.1),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -486,7 +486,7 @@
             id: (28),
             name: ("cloud_3"),
             transform: (
-                position: (4.0, 9.032944, -2.0),
+                position: (4.0, 8.679553, -2.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -514,7 +514,7 @@
             id: (14),
             name: ("creature_leg_fl"),
             transform: (
-                position: (-8.88433, 3.5364916, 5.3162236),
+                position: (0.2, -0.3, 0.3),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -535,7 +535,7 @@
             id: (11),
             name: ("creature_head"),
             transform: (
-                position: (-8.61969, 4.272962, 5.3609867),
+                position: (0.5, 0.3, 0.0),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -572,7 +572,7 @@
             id: (15),
             name: ("creature_leg_fr"),
             transform: (
-                position: (-8.985145, 3.5938785, 4.968069),
+                position: (0.2, -0.3, -0.3),
                 rotation_degrees: (9.360052, 15.945391, -0.00000022198451),
                 scale: (0.9174311, 0.91743106, 0.91743106),
                 visible: true,
@@ -593,7 +593,7 @@
             id: (21),
             name: ("island_2"),
             transform: (
-                position: (7.0, -1.1073151, -4.0),
+                position: (7.0, -1.0832248, -4.0),
                 rotation_degrees: (180.0, 0.0, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -621,9 +621,9 @@
             id: (10),
             name: ("creature_body"),
             transform: (
-                position: (1.513978, -0.26215056, -0.756989),
-                rotation_degrees: (-177.1376, 63.406326, 177.44),
-                scale: (0.9001571, 0.9001571, 0.9001571),
+                position: (4.5774527, -0.25774527, -2.3849683),
+                rotation_degrees: (171.46924, 56.01512, -172.9101),
+                scale: (1.0702875, 1.0702875, 1.0702875),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -665,7 +665,7 @@
             id: (27),
             name: ("cloud_2"),
             transform: (
-                position: (-4.0, 8.358201, 3.5),
+                position: (-4.0, 8.477106, 3.5),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -695,7 +695,7 @@
             transform: (
                 position: (-7.0, 2.0, 5.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
-                scale: (1.145567, 1.145567, 1.145567),
+                scale: (0.9336071, 0.9336071, 0.9336071),
                 visible: true,
             ),
             shape: Some(Sphere(
@@ -719,7 +719,7 @@
             id: (12),
             name: ("creature_ear_left"),
             transform: (
-                position: (-8.569283, 4.6968765, 5.6096687),
+                position: (0.4, 0.5, 0.3),
                 rotation_degrees: (-11.373345, 14.960513, -9.41878),
                 scale: (0.9174312, 0.917431, 0.91743106),
                 visible: true,
@@ -736,6 +736,44 @@
                 emissive: (0.0, 0.0, 0.0, 0.0),
             )),
         ),
+        (
+            id: (66),
+            name: ("ambience_gentle_wind"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: ambient,
+                source: Wind(
+                    speed: 0.3,
+                    gustiness: 0.2,
+                ),
+                volume: 0.25,
+                rolloff: inverse_square,
+            )),
+        ),
+        (
+            id: (67),
+            name: ("ambience_forest_ambience"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: ambient,
+                source: Forest(
+                    bird_density: 0.3,
+                    wind: 0.2,
+                ),
+                volume: 0.2,
+                rolloff: inverse_square,
+            )),
+        ),
     ],
-    next_entity_id: 66,
+    next_entity_id: 68,
 )
