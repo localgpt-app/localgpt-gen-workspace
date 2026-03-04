@@ -1,0 +1,756 @@
+(
+    version: 1,
+    meta: (
+        name: "rainbow-bridge-creature",
+        description: Some("A whimsical 3D scene featuring an adorable fluffy creature bounding across a vibrant rainbow bridge in a fantastical landscape. Includes floating islands, glowing flowers, drifting clouds, and magical sparkles. All elements are animated for a dynamic, living scene."),
+    ),
+    environment: Some((
+        background_color: Some((0.5, 0.7, 1.0, 1.0)),
+        ambient_intensity: Some(0.4),
+        ambient_color: Some((0.99999994, 0.99999994, 0.99999994, 1.0)),
+    )),
+    entities: [
+        (
+            id: (16),
+            name: ("creature_leg_bl"),
+            transform: (
+                position: (-3.7, 4.7, 0.3),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Capsule(
+                radius: 0.1,
+                half_length: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.65, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (15),
+            name: ("creature_leg_fr"),
+            transform: (
+                position: (-4.3, 4.7, -0.1),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Capsule(
+                radius: 0.1,
+                half_length: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.65, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (21),
+            name: ("island_2"),
+            transform: (
+                position: (7.0, -0.85734636, -4.0),
+                rotation_degrees: (-180.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 3.0,
+                height: 2.0,
+            )),
+            material: Some((
+                color: (0.3, 0.6, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.25,
+                    frequency: 0.6,
+                    phase: 1.5,
+                ),
+            ],
+        ),
+        (
+            id: (20),
+            name: ("island_1"),
+            transform: (
+                position: (-8.0, 0.25914532, 5.0),
+                rotation_degrees: (-180.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.5,
+                height: 1.5,
+            )),
+            material: Some((
+                color: (0.4, 0.7, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.3,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+            ],
+        ),
+        (
+            id: (9),
+            name: ("rainbow_purple"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 8.5,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (0.7, 0.3, 0.9, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (8),
+            name: ("rainbow_blue"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 8.0,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (0.2, 0.5, 1.0, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (22),
+            name: ("island_3"),
+            transform: (
+                position: (2.0, 1.3734329, 6.0),
+                rotation_degrees: (-180.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 1.8,
+                height: 1.2,
+            )),
+            material: Some((
+                color: (0.5, 0.7, 0.35, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.35,
+                    frequency: 0.4,
+                    phase: 3.0,
+                ),
+            ],
+        ),
+        (
+            id: (24),
+            name: ("glow_flower_2"),
+            transform: (
+                position: (-8.5, 1.8, 4.5),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.1905468, 1.1905468, 1.1905468),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.25,
+            )),
+            material: Some((
+                color: (0.4, 0.8, 1.0, 1.0),
+                metallic: 0.1,
+                roughness: 0.3,
+                emissive: (0.4, 0.8, 1.0, 0.6),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.85,
+                    max_scale: 1.2,
+                    frequency: 1.8,
+                ),
+            ],
+        ),
+        (
+            id: (32),
+            name: ("sparkle_2"),
+            transform: (
+                position: (-3.0, 5.5, 1.5),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (0.7369917, 0.7369917, 0.7369917),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.12,
+            )),
+            material: Some((
+                color: (0.9, 0.5, 1.0, 1.0),
+                metallic: 0.0,
+                roughness: 0.1,
+                emissive: (0.9, 0.5, 1.0, 0.8),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.7,
+                    max_scale: 1.3,
+                    frequency: 2.5,
+                ),
+            ],
+        ),
+        (
+            id: (29),
+            name: ("sun"),
+            transform: (
+                position: (0.0, 10.0, 0.0),
+                rotation_degrees: (-69.44397, 30.336412, 53.407524),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (1.0, 0.95, 0.85, 1.0),
+                intensity: 1500.0,
+                direction: Some((-0.5050762, -0.80812216, -0.3030457)),
+                shadows: true,
+            )),
+        ),
+        (
+            id: (19),
+            name: ("creature_nose"),
+            transform: (
+                position: (-4.0, 5.45, 0.65),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.08,
+            )),
+            material: Some((
+                color: (0.1, 0.05, 0.05, 1.0),
+                metallic: 0.0,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (23),
+            name: ("glow_flower_1"),
+            transform: (
+                position: (-7.0, 2.0, 5.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0266495, 1.0266495, 1.0266495),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.3,
+            )),
+            material: Some((
+                color: (1.0, 0.4, 0.8, 1.0),
+                metallic: 0.1,
+                roughness: 0.3,
+                emissive: (1.0, 0.4, 0.8, 0.6),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.9,
+                    max_scale: 1.15,
+                    frequency: 1.5,
+                ),
+            ],
+        ),
+        (
+            id: (17),
+            name: ("creature_leg_br"),
+            transform: (
+                position: (-3.7, 4.7, -0.1),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Capsule(
+                radius: 0.1,
+                half_length: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.65, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (13),
+            name: ("creature_ear_right"),
+            transform: (
+                position: (-4.0, 6.0, 0.1),
+                rotation_degrees: (-20.000002, 0.0, 15.000002),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 0.12,
+                height: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.55, 0.35, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (6),
+            name: ("rainbow_yellow"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 7.0,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (1.0, 0.9, 0.2, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (33),
+            name: ("sparkle_3"),
+            transform: (
+                position: (-2.0, 5.8, -0.5),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.3783923, 1.3783923, 1.3783923),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.18,
+            )),
+            material: Some((
+                color: (0.5, 0.9, 1.0, 1.0),
+                metallic: 0.0,
+                roughness: 0.1,
+                emissive: (0.5, 0.9, 1.0, 0.8),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.6,
+                    max_scale: 1.4,
+                    frequency: 1.8,
+                ),
+            ],
+        ),
+        (
+            id: (26),
+            name: ("cloud_1"),
+            transform: (
+                position: (-5.0, 8.002639, 3.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 1.5,
+            )),
+            material: Some((
+                color: (1.0, 1.0, 1.0, 0.7),
+                metallic: 0.0,
+                roughness: 1.0,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 1.5,
+                    phase: 0.0,
+                ),
+            ],
+        ),
+        (
+            id: (12),
+            name: ("creature_ear_left"),
+            transform: (
+                position: (-4.0, 6.0, 0.5),
+                rotation_degrees: (-20.000002, 0.0, -15.000002),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 0.12,
+                height: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.55, 0.35, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (28),
+            name: ("cloud_3"),
+            transform: (
+                position: (4.0, 8.818956, -2.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 2.0,
+            )),
+            material: Some((
+                color: (1.0, 0.95, 0.98, 0.7),
+                metallic: 0.0,
+                roughness: 1.0,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.25,
+                    frequency: 0.8,
+                    phase: 2.0,
+                ),
+            ],
+        ),
+        (
+            id: (27),
+            name: ("cloud_2"),
+            transform: (
+                position: (-4.0, 8.357679, 3.5),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 1.2,
+            )),
+            material: Some((
+                color: (1.0, 1.0, 1.0, 0.7),
+                metallic: 0.0,
+                roughness: 1.0,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.15,
+                    frequency: 1.2,
+                    phase: 1.0,
+                ),
+            ],
+        ),
+        (
+            id: (30),
+            name: ("fill_light"),
+            transform: (
+                position: (0.0, 10.0, 0.0),
+                rotation_degrees: (-147.99461, -17.640633, -169.27501),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (0.9, 0.95, 1.0, 1.0),
+                intensity: 400.0,
+                direction: Some((0.30304575, -0.5050762, 0.808122)),
+                shadows: false,
+            )),
+        ),
+        (
+            id: (34),
+            name: ("sparkle_4"),
+            transform: (
+                position: (-1.0, 5.3, 0.8),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (0.99340284, 0.99340284, 0.99340284),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.1,
+            )),
+            material: Some((
+                color: (1.0, 0.6, 0.8, 1.0),
+                metallic: 0.0,
+                roughness: 0.1,
+                emissive: (1.0, 0.6, 0.8, 0.8),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.75,
+                    max_scale: 1.25,
+                    frequency: 3.0,
+                ),
+            ],
+        ),
+        (
+            id: (10),
+            name: ("creature_body"),
+            transform: (
+                position: (-1.509438, 5.6226406, 0.3773595),
+                rotation_degrees: (45.000027, -70.52877, 43.31388),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.6,
+            )),
+            material: Some((
+                color: (1.0, 0.65, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+            behaviors: [
+                PathFollow(
+                    waypoints: [
+                        (-4.0, 5.0, 0.0),
+                        (-2.0, 5.5, 0.5),
+                        (0.0, 6.0, 0.0),
+                        (2.0, 5.8, -0.3),
+                        (4.0, 5.5, 0.0),
+                    ],
+                    speed: 2.0,
+                    mode: ping_pong,
+                    orient_to_path: true,
+                ),
+            ],
+        ),
+        (
+            id: (35),
+            name: ("sparkle_5"),
+            transform: (
+                position: (0.0, 5.6, -1.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.2555664, 1.2555664, 1.2555664),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.14,
+            )),
+            material: Some((
+                color: (0.6, 1.0, 0.6, 1.0),
+                metallic: 0.0,
+                roughness: 0.1,
+                emissive: (0.6, 1.0, 0.6, 0.8),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.65,
+                    max_scale: 1.35,
+                    frequency: 2.2,
+                ),
+            ],
+        ),
+        (
+            id: (4),
+            name: ("rainbow_red"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 6.0,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (1.0, 0.2, 0.2, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (18),
+            name: ("creature_tail"),
+            transform: (
+                position: (-3.3, 5.2, 0.0),
+                rotation_degrees: (0.0, 0.0, -45.000004),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Capsule(
+                radius: 0.08,
+                half_length: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.8, 0.5, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (5),
+            name: ("rainbow_orange"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 6.5,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (1.0, 0.5, 0.2, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (14),
+            name: ("creature_leg_fl"),
+            transform: (
+                position: (-4.3, 4.7, 0.3),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Capsule(
+                radius: 0.1,
+                half_length: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.65, 0.4, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (31),
+            name: ("sparkle_1"),
+            transform: (
+                position: (-5.0, 6.0, 1.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (0.8285811, 0.8285811, 0.8285811),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.15,
+            )),
+            material: Some((
+                color: (1.0, 0.9, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.1,
+                emissive: (1.0, 0.9, 0.3, 0.8),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.8,
+                    max_scale: 1.2,
+                    frequency: 2.0,
+                ),
+            ],
+        ),
+        (
+            id: (7),
+            name: ("rainbow_green"),
+            transform: (
+                position: (0.0, 3.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 90.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Torus(
+                major_radius: 7.5,
+                minor_radius: 0.3,
+            )),
+            material: Some((
+                color: (0.3, 0.9, 0.3, 1.0),
+                metallic: 0.2,
+                roughness: 0.3,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (11),
+            name: ("creature_head"),
+            transform: (
+                position: (-4.0, 5.5, 0.3),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (1.0, 0.7, 0.5, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (25),
+            name: ("glow_flower_3"),
+            transform: (
+                position: (8.0, 0.5, -4.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.019652, 1.019652, 1.019652),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.35,
+            )),
+            material: Some((
+                color: (0.8, 1.0, 0.4, 1.0),
+                metallic: 0.1,
+                roughness: 0.3,
+                emissive: (0.8, 1.0, 0.4, 0.6),
+            )),
+            behaviors: [
+                Pulse(
+                    min_scale: 0.9,
+                    max_scale: 1.1,
+                    frequency: 1.3,
+                ),
+            ],
+        ),
+    ],
+    next_entity_id: 36,
+)

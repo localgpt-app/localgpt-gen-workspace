@@ -1,0 +1,20 @@
+# LocalGPT workspace .gitignore
+
+# Nothing to ignore in workspace by default
+# All memory files should be version controlled:
+# - MEMORY.md (curated knowledge)
+# - HEARTBEAT.md (pending tasks)
+# - SOUL.md (persona)
+# - LocalGPT.md (security policy)
+# - memory/*.md (daily logs)
+# - skills/ (custom skills)
+
+# Security manifest (managed by localgpt md sign)
+.localgpt_manifest.json
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+

@@ -1,0 +1,129 @@
+(
+    version: 1,
+    meta: (
+        name: "ball-with-nature",
+        description: Some("A ball with orbiting fire (crackling sound, pulsing glow) and forest ambience. No ground plane - floating in space."),
+    ),
+    environment: Some((
+        background_color: Some((0.16862746, 0.17254902, 0.18431373, 1.0)),
+        ambient_intensity: Some(80.0),
+        ambient_color: Some((0.99999994, 0.99999994, 0.99999994, 1.0)),
+    )),
+    camera: Some((
+        position: (8.75877, 7.1550345, -1.1682105),
+        look_at: (2.3143091, -0.49134588, -1.1256688),
+        fov_degrees: 45.0,
+    )),
+    entities: [
+        (
+            id: (3),
+            name: ("main_light"),
+            transform: (
+                position: (4.0, 8.0, 4.0),
+                rotation_degrees: (-63.43495, 24.094845, 39.23152),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (1.0, 0.95, 0.9, 1.0),
+                intensity: 10000.0,
+                direction: Some((-0.4082483, -0.8164966, -0.40824834)),
+                shadows: true,
+            )),
+        ),
+        (
+            id: (4),
+            name: ("ball"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (0.8, 0.8, 0.8, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (6),
+            name: ("fire_glow"),
+            transform: (
+                position: (-1.8503398, 0.0, -0.7591064),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (0.98402876, 0.98402876, 0.98402876),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.3,
+            )),
+            material: Some((
+                color: (1.0, 0.4, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (1.0, 0.4, 0.1, 1.0),
+                unlit: Some(true),
+            )),
+            behaviors: [
+                Orbit(
+                    center: Some("ball"),
+                    radius: 2.0,
+                    speed: 45.0,
+                    axis: (0.0, 1.0, 0.0),
+                    phase: 0.0,
+                    tilt: 0.0,
+                ),
+                Pulse(
+                    min_scale: 0.8,
+                    max_scale: 1.2,
+                    frequency: 3.0,
+                ),
+            ],
+        ),
+        (
+            id: (7),
+            name: ("ambience_forest_birds"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: ambient,
+                source: Forest(
+                    bird_density: 0.6,
+                    wind: 0.2,
+                ),
+                volume: 0.5,
+                rolloff: inverse_square,
+            )),
+        ),
+        (
+            id: (8),
+            name: ("ambience_gentle_wind"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: ambient,
+                source: Wind(
+                    speed: 0.3,
+                    gustiness: 0.2,
+                ),
+                volume: 0.3,
+                rolloff: inverse_square,
+            )),
+        ),
+    ],
+    next_entity_id: 9,
+)
