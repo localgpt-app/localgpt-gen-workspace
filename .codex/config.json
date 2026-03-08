@@ -1,0 +1,27 @@
+{
+  "theme": "Default",
+  "selectedAuthType": "oauth-personal",
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "general": {
+    "vimMode": true,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
+  },
+  "ui": {
+    "footer": {
+      "hideContextPercentage": false
+    },
+    "showMemoryUsage": true,
+    "showModelInfoInChat": true
+  },
+  "model":{
+    "name": "gemini-3-pro-preview"
+  }
+}
