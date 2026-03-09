@@ -15,3 +15,5 @@ This is a gen world skill. Load it with `gen_load_world` to restore the 3D scene
 behaviors, audio, avatar, and tours.
 
 To export for external viewers, use `gen_export_world` with format "glb" or "gltf".
+
+![Screenshot](desert-pyramids-ufo-screenshot.png)
