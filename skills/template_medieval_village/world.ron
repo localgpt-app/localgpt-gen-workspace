@@ -1,0 +1,1272 @@
+(
+    version: 1,
+    meta: (
+        name: "template_medieval_village",
+        description: Some("A medieval village template with cobblestone town square, central well, 3 market stalls, 5 thatched-roof cottages with smoking chimneys, patrolling guard, working blacksmith, wandering villagers, and pine-forested hills. Sunset atmosphere with warm directional light, fog, and ambient wind/forge audio."),
+    ),
+    environment: Some((
+        background_color: Some((0.8, 0.7, 0.6, 1.0)),
+        ambient_intensity: Some(0.2),
+        ambient_color: Some((0.2, 0.2, 0.4, 1.0)),
+    )),
+    camera: Some((
+        position: (70.28322, 42.296047, 49.277637),
+        look_at: (62.50255, 39.659237, 43.57601),
+        fov_degrees: 45.0,
+    )),
+    entities: [
+        (
+            id: (64),
+            name: ("pine_16"),
+            transform: (
+                position: (-55.0, 16.0, -55.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.4,
+                height: 11.0,
+            )),
+            material: Some((
+                color: (0.14, 0.38, 0.11, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (33),
+            name: ("cottage_4_chimney"),
+            transform: (
+                position: (-13.5, 18.4, -19.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.35,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.4, 0.35, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (38),
+            name: ("smoke_1b"),
+            transform: (
+                position: (19.5, 8.763966, 9.2),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.3,
+            )),
+            material: Some((
+                color: (0.75, 0.75, 0.75, 0.2),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.5,
+                    frequency: 0.35,
+                    phase: 1.2,
+                ),
+            ],
+        ),
+        (
+            id: (34),
+            name: ("cottage_5_body"),
+            transform: (
+                position: (22.0, 14.15, -5.0),
+                rotation_degrees: (0.0, -39.999996, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 5.0,
+                y: 4.0,
+                z: 4.0,
+            )),
+            material: Some((
+                color: (0.94, 0.9, 0.84, 1.0),
+                metallic: 0.0,
+                roughness: 0.95,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (25),
+            name: ("cottage_2_body"),
+            transform: (
+                position: (-18.0, 14.15, 12.0),
+                rotation_degrees: (-0.0, 30.000002, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 5.0,
+                y: 4.0,
+                z: 4.0,
+            )),
+            material: Some((
+                color: (0.9, 0.86, 0.78, 1.0),
+                metallic: 0.0,
+                roughness: 0.95,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (12),
+            name: ("stall_1"),
+            transform: (
+                position: (7.0, 13.15, 3.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 3.0,
+                y: 2.0,
+                z: 2.0,
+            )),
+            material: Some((
+                color: (0.45, 0.28, 0.12, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (14),
+            name: ("stall_1_counter"),
+            transform: (
+                position: (7.0, 13.3, 1.9),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 2.8,
+                y: 0.1,
+                z: 0.8,
+            )),
+            material: Some((
+                color: (0.55, 0.35, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (11),
+            name: ("well_roof"),
+            transform: (
+                position: (0.0, 16.4, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.0,
+                height: 1.5,
+            )),
+            material: Some((
+                color: (0.4, 0.25, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (15),
+            name: ("stall_2"),
+            transform: (
+                position: (-7.0, 13.15, 3.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 3.0,
+                y: 2.0,
+                z: 2.0,
+            )),
+            material: Some((
+                color: (0.5, 0.32, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (56),
+            name: ("pine_8"),
+            transform: (
+                position: (-60.0, 16.0, 10.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.4,
+                height: 11.0,
+            )),
+            material: Some((
+                color: (0.15, 0.39, 0.12, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (49),
+            name: ("pine_1"),
+            transform: (
+                position: (52.0, 16.0, 30.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.5,
+                height: 10.0,
+            )),
+            material: Some((
+                color: (0.15, 0.4, 0.12, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (60),
+            name: ("pine_12"),
+            transform: (
+                position: (-65.0, 17.0, -40.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.3,
+                height: 10.0,
+            )),
+            material: Some((
+                color: (0.15, 0.37, 0.12, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (21),
+            name: ("cottage_1_body"),
+            transform: (
+                position: (18.0, 14.15, 8.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 5.0,
+                y: 4.0,
+                z: 4.0,
+            )),
+            material: Some((
+                color: (0.92, 0.88, 0.82, 1.0),
+                metallic: 0.0,
+                roughness: 0.95,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (62),
+            name: ("pine_14"),
+            transform: (
+                position: (-45.0, 15.0, 45.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.0,
+                height: 12.0,
+            )),
+            material: Some((
+                color: (0.12, 0.39, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (4),
+            name: ("Terrain"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            material: Some((
+                color: (0.3, 0.6, 0.2, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 1.0),
+            )),
+        ),
+        (
+            id: (23),
+            name: ("cottage_1_chimney"),
+            transform: (
+                position: (19.5, 18.4, 9.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.35,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.4, 0.35, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (39),
+            name: ("smoke_2a"),
+            transform: (
+                position: (-16.5, 8.001973, 13.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (0.7, 0.7, 0.7, 0.3),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.55,
+                    frequency: 0.38,
+                    phase: 0.5,
+                ),
+            ],
+        ),
+        (
+            id: (65),
+            name: ("pine_17"),
+            transform: (
+                position: (65.0, 17.0, 40.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.8,
+                height: 9.0,
+            )),
+            material: Some((
+                color: (0.18, 0.43, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (70),
+            name: ("village_wind"),
+            transform: (
+                position: (0.0, 15.0, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: sfx,
+                source: WindEmitter(
+                    pitch: 180.0,
+                ),
+                volume: 0.3,
+                radius: Some(80.0),
+                rolloff: inverse_square,
+            )),
+        ),
+        (
+            id: (55),
+            name: ("pine_7"),
+            transform: (
+                position: (35.0, 16.0, 55.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.6,
+                height: 10.0,
+            )),
+            material: Some((
+                color: (0.17, 0.43, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (32),
+            name: ("cottage_4_roof"),
+            transform: (
+                position: (-15.0, 17.65, -18.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 4.0,
+                height: 3.0,
+            )),
+            material: Some((
+                color: (0.5, 0.34, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (61),
+            name: ("pine_13"),
+            transform: (
+                position: (55.0, 16.0, -50.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.5,
+                height: 9.0,
+            )),
+            material: Some((
+                color: (0.17, 0.42, 0.14, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (66),
+            name: ("pine_18"),
+            transform: (
+                position: (-70.0, 18.0, 20.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.2,
+                height: 10.0,
+            )),
+            material: Some((
+                color: (0.15, 0.41, 0.12, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (41),
+            name: ("smoke_4a"),
+            transform: (
+                position: (-13.5, 8.696955, -19.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (0.7, 0.7, 0.7, 0.3),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.5,
+                    frequency: 0.36,
+                    phase: 3.1,
+                ),
+            ],
+        ),
+        (
+            id: (29),
+            name: ("cottage_3_roof"),
+            transform: (
+                position: (12.0, 17.65, -20.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 4.0,
+                height: 3.0,
+            )),
+            material: Some((
+                color: (0.52, 0.36, 0.16, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (52),
+            name: ("pine_4"),
+            transform: (
+                position: (-55.0, 15.0, -25.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.3,
+                height: 8.0,
+            )),
+            material: Some((
+                color: (0.14, 0.36, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (35),
+            name: ("cottage_5_roof"),
+            transform: (
+                position: (22.0, 17.65, -5.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 4.0,
+                height: 3.0,
+            )),
+            material: Some((
+                color: (0.47, 0.32, 0.13, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (19),
+            name: ("stall_3_awning"),
+            transform: (
+                position: (1.8, 14.4, -7.0),
+                rotation_degrees: (0.0, 0.0, -20.0),
+                scale: (1.5, 1.0, 3.0),
+                visible: true,
+            ),
+            shape: Some(Plane(
+                x: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (0.85, 0.2, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (9),
+            name: ("well_post_l"),
+            transform: (
+                position: (-1.2, 14.4, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.1,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.35, 0.2, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (42),
+            name: ("smoke_5a"),
+            transform: (
+                position: (23.5, 7.787887, -6.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (0.7, 0.7, 0.7, 0.3),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.58,
+                    frequency: 0.4,
+                    phase: 1.7,
+                ),
+            ],
+        ),
+        (
+            id: (5),
+            name: ("sun"),
+            transform: (
+                position: (0.0, 10.0, 0.0),
+                rotation_degrees: (-66.8014, 33.286194, 52.013912),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (1.0, 0.9, 0.7, 1.0),
+                intensity: 8000.0,
+                direction: Some((-0.5488214, -0.76834965, -0.32929286)),
+                shadows: true,
+            )),
+        ),
+        (
+            id: (10),
+            name: ("well_post_r"),
+            transform: (
+                position: (1.2, 14.4, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.1,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.35, 0.2, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.8,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (31),
+            name: ("cottage_4_body"),
+            transform: (
+                position: (-15.0, 14.15, -18.0),
+                rotation_degrees: (-0.0, 45.000004, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 5.0,
+                y: 4.0,
+                z: 4.0,
+            )),
+            material: Some((
+                color: (0.91, 0.87, 0.8, 1.0),
+                metallic: 0.0,
+                roughness: 0.95,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (17),
+            name: ("stall_2_counter"),
+            transform: (
+                position: (-7.0, 13.3, 1.9),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 2.8,
+                y: 0.1,
+                z: 0.8,
+            )),
+            material: Some((
+                color: (0.55, 0.35, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (8),
+            name: ("well_inner"),
+            transform: (
+                position: (0.0, 12.65, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 1.2,
+                height: 1.1,
+            )),
+            material: Some((
+                color: (0.15, 0.15, 0.2, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (28),
+            name: ("cottage_3_body"),
+            transform: (
+                position: (12.0, 14.15, -20.0),
+                rotation_degrees: (0.0, -15.000002, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 5.0,
+                y: 4.0,
+                z: 4.0,
+            )),
+            material: Some((
+                color: (0.93, 0.89, 0.83, 1.0),
+                metallic: 0.0,
+                roughness: 0.95,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (54),
+            name: ("pine_6"),
+            transform: (
+                position: (-42.0, 14.0, -50.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.0,
+                height: 9.0,
+            )),
+            material: Some((
+                color: (0.13, 0.37, 0.11, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (68),
+            name: ("pine_20"),
+            transform: (
+                position: (-60.0, 15.0, -65.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.5,
+                height: 8.0,
+            )),
+            material: Some((
+                color: (0.16, 0.42, 0.13, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (16),
+            name: ("stall_2_awning"),
+            transform: (
+                position: (-7.0, 14.4, 1.8),
+                rotation_degrees: (20.0, 0.0, 0.0),
+                scale: (3.0, 1.0, 1.5),
+                visible: true,
+            ),
+            shape: Some(Plane(
+                x: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (0.9, 0.85, 0.8, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (20),
+            name: ("stall_3_counter"),
+            transform: (
+                position: (1.9, 13.3, -7.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 0.8,
+                y: 0.1,
+                z: 2.8,
+            )),
+            material: Some((
+                color: (0.55, 0.35, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (6),
+            name: ("town_square_floor"),
+            transform: (
+                position: (0.0, 12.15, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (20.0, 1.0, 20.0),
+                visible: true,
+            ),
+            shape: Some(Plane(
+                x: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (0.45, 0.4, 0.35, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (18),
+            name: ("stall_3"),
+            transform: (
+                position: (3.0, 13.15, -7.0),
+                rotation_degrees: (0.0, 90.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 2.0,
+                y: 2.0,
+                z: 3.0,
+            )),
+            material: Some((
+                color: (0.42, 0.26, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (30),
+            name: ("cottage_3_chimney"),
+            transform: (
+                position: (13.5, 18.4, -21.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.35,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.4, 0.35, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (40),
+            name: ("smoke_3a"),
+            transform: (
+                position: (13.5, 8.761075, -21.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (0.7, 0.7, 0.7, 0.3),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.6,
+                    frequency: 0.42,
+                    phase: 2.0,
+                ),
+            ],
+        ),
+        (
+            id: (51),
+            name: ("pine_3"),
+            transform: (
+                position: (-48.0, 17.0, 35.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 3.0,
+                height: 12.0,
+            )),
+            material: Some((
+                color: (0.18, 0.42, 0.14, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (53),
+            name: ("pine_5"),
+            transform: (
+                position: (60.0, 18.0, -15.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.8,
+                height: 11.0,
+            )),
+            material: Some((
+                color: (0.16, 0.41, 0.13, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (59),
+            name: ("pine_11"),
+            transform: (
+                position: (70.0, 18.0, 5.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.9,
+                height: 11.0,
+            )),
+            material: Some((
+                color: (0.13, 0.41, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (13),
+            name: ("stall_1_awning"),
+            transform: (
+                position: (7.0, 14.4, 1.8),
+                rotation_degrees: (20.0, 0.0, 0.0),
+                scale: (3.0, 1.0, 1.5),
+                visible: true,
+            ),
+            shape: Some(Plane(
+                x: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (0.85, 0.2, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (7),
+            name: ("well_base"),
+            transform: (
+                position: (0.0, 12.65, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 1.5,
+                height: 1.0,
+            )),
+            material: Some((
+                color: (0.5, 0.5, 0.5, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (37),
+            name: ("smoke_1a"),
+            transform: (
+                position: (19.5, 7.7863855, 9.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.4,
+            )),
+            material: Some((
+                color: (0.7, 0.7, 0.7, 0.3),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+                alpha_mode: Some(blend),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.6,
+                    frequency: 0.4,
+                    phase: 0.0,
+                ),
+            ],
+        ),
+        (
+            id: (57),
+            name: ("pine_9"),
+            transform: (
+                position: (48.0, 17.0, 48.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.7,
+                height: 12.0,
+            )),
+            material: Some((
+                color: (0.14, 0.4, 0.11, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (50),
+            name: ("pine_2"),
+            transform: (
+                position: (45.0, 15.0, -42.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.2,
+                height: 9.0,
+            )),
+            material: Some((
+                color: (0.12, 0.38, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (63),
+            name: ("pine_15"),
+            transform: (
+                position: (42.0, 16.0, -60.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.6,
+                height: 10.0,
+            )),
+            material: Some((
+                color: (0.16, 0.4, 0.13, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (24),
+            name: ("cottage_1_door"),
+            transform: (
+                position: (17.5, 13.15, 5.92),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 0.9,
+                y: 2.0,
+                z: 0.15,
+            )),
+            material: Some((
+                color: (0.35, 0.2, 0.08, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (26),
+            name: ("cottage_2_roof"),
+            transform: (
+                position: (-18.0, 17.65, 12.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 4.0,
+                height: 3.0,
+            )),
+            material: Some((
+                color: (0.48, 0.33, 0.14, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (36),
+            name: ("cottage_5_chimney"),
+            transform: (
+                position: (23.5, 18.4, -6.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.35,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.4, 0.35, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (67),
+            name: ("pine_19"),
+            transform: (
+                position: (50.0, 16.0, 65.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.7,
+                height: 12.0,
+            )),
+            material: Some((
+                color: (0.13, 0.36, 0.1, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (22),
+            name: ("cottage_1_roof"),
+            transform: (
+                position: (18.0, 17.65, 8.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 4.0,
+                height: 3.0,
+            )),
+            material: Some((
+                color: (0.5, 0.35, 0.15, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (27),
+            name: ("cottage_2_chimney"),
+            transform: (
+                position: (-16.5, 18.4, 13.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.35,
+                height: 2.5,
+            )),
+            material: Some((
+                color: (0.42, 0.36, 0.3, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (58),
+            name: ("pine_10"),
+            transform: (
+                position: (-50.0, 15.0, 55.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cone(
+                radius: 2.1,
+                height: 8.0,
+            )),
+            material: Some((
+                color: (0.16, 0.38, 0.13, 1.0),
+                metallic: 0.0,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+    ],
+    next_entity_id: 71,
+)
