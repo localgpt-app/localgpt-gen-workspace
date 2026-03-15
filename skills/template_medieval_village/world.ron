@@ -2,7 +2,7 @@
     version: 1,
     meta: (
         name: "template_medieval_village",
-        description: Some("A medieval village template with cobblestone town square, central well, 3 market stalls, 5 thatched-roof cottages with smoking chimneys, patrolling guard, working blacksmith, wandering villagers, and pine-forested hills. Sunset atmosphere with warm directional light, fog, and ambient wind/forge audio."),
+        description: Some("Medieval village template - Willowmere. Nearly-flat perlin terrain (200x200m, height_scale 1.5), cobblestone town square with central well, 3 market stalls (Bakery, Herbs & Potions, Leatherworks), 5 thatched-roof cottages with smoking chimneys, patrolling Guard with quest dialogue, Blacksmith with forge fire audio and branching dialogue, 3 wandering Villagers. Cobblestone crossroads + dirt paths to cottages. 5 collectible gold coins (spinning, sparkle pickup). 20 pine trees on outer hills. Interactive proximity door on cottage 1. Sunset atmosphere with fog, wind audio. Player spawns at village entrance facing the square."),
     ),
     environment: Some((
         background_color: Some((0.8, 0.7, 0.6, 1.0)),
@@ -10,8 +10,8 @@
         ambient_color: Some((0.2, 0.2, 0.4, 1.0)),
     )),
     camera: Some((
-        position: (70.28322, 42.296047, 49.277637),
-        look_at: (62.50255, 39.659237, 43.57601),
+        position: (35.0, 20.0, 30.0),
+        look_at: (27.30846, 16.822947, 24.455034),
         fov_degrees: 45.0,
     )),
     entities: [
@@ -19,7 +19,7 @@
             id: (64),
             name: ("pine_16"),
             transform: (
-                position: (-55.0, 16.0, -55.0),
+                position: (-55.0, 5.0, -55.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -39,7 +39,7 @@
             id: (33),
             name: ("cottage_4_chimney"),
             transform: (
-                position: (-13.5, 18.4, -19.0),
+                position: (-13.5, 7.25, -19.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -59,7 +59,7 @@
             id: (38),
             name: ("smoke_1b"),
             transform: (
-                position: (19.5, 8.763966, 9.2),
+                position: (19.5, 10.267889, 9.2),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -87,7 +87,7 @@
             id: (34),
             name: ("cottage_5_body"),
             transform: (
-                position: (22.0, 14.15, -5.0),
+                position: (22.0, 3.0, -5.0),
                 rotation_degrees: (0.0, -39.999996, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -108,7 +108,7 @@
             id: (25),
             name: ("cottage_2_body"),
             transform: (
-                position: (-18.0, 14.15, 12.0),
+                position: (-18.0, 3.0, 12.0),
                 rotation_degrees: (-0.0, 30.000002, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -129,7 +129,7 @@
             id: (12),
             name: ("stall_1"),
             transform: (
-                position: (7.0, 13.15, 3.0),
+                position: (7.0, 2.0, 3.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -150,7 +150,7 @@
             id: (14),
             name: ("stall_1_counter"),
             transform: (
-                position: (7.0, 13.3, 1.9),
+                position: (7.0, 2.15, 1.9),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -171,7 +171,7 @@
             id: (11),
             name: ("well_roof"),
             transform: (
-                position: (0.0, 16.4, 0.0),
+                position: (0.0, 5.25, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -188,10 +188,20 @@
             )),
         ),
         (
+            id: (79),
+            name: ("Sign_Willowmere"),
+            transform: (
+                position: (0.0, 7.0, 0.0),
+                rotation_degrees: (-23.428688, 46.949654, 17.570917),
+                scale: (0.023333333, 0.023333333, 0.023333333),
+                visible: true,
+            ),
+        ),
+        (
             id: (15),
             name: ("stall_2"),
             transform: (
-                position: (-7.0, 13.15, 3.0),
+                position: (-7.0, 2.0, 3.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -212,7 +222,7 @@
             id: (56),
             name: ("pine_8"),
             transform: (
-                position: (-60.0, 16.0, 10.0),
+                position: (-60.0, 5.0, 10.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -232,7 +242,7 @@
             id: (49),
             name: ("pine_1"),
             transform: (
-                position: (52.0, 16.0, 30.0),
+                position: (52.0, 5.0, 30.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -252,7 +262,7 @@
             id: (60),
             name: ("pine_12"),
             transform: (
-                position: (-65.0, 17.0, -40.0),
+                position: (-65.0, 6.0, -40.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -272,7 +282,7 @@
             id: (21),
             name: ("cottage_1_body"),
             transform: (
-                position: (18.0, 14.15, 8.0),
+                position: (18.0, 3.0, 8.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -293,7 +303,7 @@
             id: (62),
             name: ("pine_14"),
             transform: (
-                position: (-45.0, 15.0, 45.0),
+                position: (-45.0, 4.0, 45.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -310,7 +320,7 @@
             )),
         ),
         (
-            id: (4),
+            id: (93),
             name: ("Terrain"),
             transform: (
                 position: (0.0, 0.0, 0.0),
@@ -329,7 +339,7 @@
             id: (23),
             name: ("cottage_1_chimney"),
             transform: (
-                position: (19.5, 18.4, 9.0),
+                position: (19.5, 7.25, 9.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -349,7 +359,7 @@
             id: (39),
             name: ("smoke_2a"),
             transform: (
-                position: (-16.5, 8.001973, 13.0),
+                position: (-16.5, 8.769544, 13.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -377,7 +387,7 @@
             id: (65),
             name: ("pine_17"),
             transform: (
-                position: (65.0, 17.0, 40.0),
+                position: (65.0, 6.0, 40.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -397,7 +407,7 @@
             id: (70),
             name: ("village_wind"),
             transform: (
-                position: (0.0, 15.0, 0.0),
+                position: (0.0, 4.0, 0.0),
                 rotation_degrees: (-0.0, 0.0, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -413,10 +423,42 @@
             )),
         ),
         (
+            id: (89),
+            name: ("gold_coin_2"),
+            transform: (
+                position: (-8.0, 1.71773, -6.0),
+                rotation_degrees: (-180.0, -52.293823, -180.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.3,
+                height: 0.08,
+            )),
+            material: Some((
+                color: (1.0, 0.84, 0.0, 1.0),
+                metallic: 0.9,
+                roughness: 0.15,
+                emissive: (0.4, 0.3, 0.0, 1.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+                Spin(
+                    axis: (0.0, 1.0, 0.0),
+                    speed: 45.0,
+                ),
+            ],
+        ),
+        (
             id: (55),
             name: ("pine_7"),
             transform: (
-                position: (35.0, 16.0, 55.0),
+                position: (35.0, 5.0, 55.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -436,7 +478,7 @@
             id: (32),
             name: ("cottage_4_roof"),
             transform: (
-                position: (-15.0, 17.65, -18.0),
+                position: (-15.0, 6.5, -18.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -456,7 +498,7 @@
             id: (61),
             name: ("pine_13"),
             transform: (
-                position: (55.0, 16.0, -50.0),
+                position: (55.0, 5.0, -50.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -476,7 +518,7 @@
             id: (66),
             name: ("pine_18"),
             transform: (
-                position: (-70.0, 18.0, 20.0),
+                position: (-70.0, 7.0, 20.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -496,7 +538,7 @@
             id: (41),
             name: ("smoke_4a"),
             transform: (
-                position: (-13.5, 8.696955, -19.0),
+                position: (-13.5, 8.757363, -19.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -521,10 +563,52 @@
             ],
         ),
         (
+            id: (83),
+            name: ("Sign_Blacksmith"),
+            transform: (
+                position: (15.0, 3.3, -1.5),
+                rotation_degrees: (-27.930693, 29.290762, 14.540715),
+                scale: (0.016666668, 0.016666668, 0.016666668),
+                visible: true,
+            ),
+        ),
+        (
+            id: (88),
+            name: ("gold_coin_1"),
+            transform: (
+                position: (5.0, 1.5264806, 5.0),
+                rotation_degrees: (-180.0, -52.293823, -180.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.3,
+                height: 0.08,
+            )),
+            material: Some((
+                color: (1.0, 0.84, 0.0, 1.0),
+                metallic: 0.9,
+                roughness: 0.15,
+                emissive: (0.4, 0.3, 0.0, 1.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+                Spin(
+                    axis: (0.0, 1.0, 0.0),
+                    speed: 45.0,
+                ),
+            ],
+        ),
+        (
             id: (29),
             name: ("cottage_3_roof"),
             transform: (
-                position: (12.0, 17.65, -20.0),
+                position: (12.0, 6.5, -20.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -544,7 +628,7 @@
             id: (52),
             name: ("pine_4"),
             transform: (
-                position: (-55.0, 15.0, -25.0),
+                position: (-55.0, 4.0, -25.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -564,7 +648,7 @@
             id: (35),
             name: ("cottage_5_roof"),
             transform: (
-                position: (22.0, 17.65, -5.0),
+                position: (22.0, 6.5, -5.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -584,7 +668,7 @@
             id: (19),
             name: ("stall_3_awning"),
             transform: (
-                position: (1.8, 14.4, -7.0),
+                position: (1.8, 3.25, -7.0),
                 rotation_degrees: (0.0, 0.0, -20.0),
                 scale: (1.5, 1.0, 3.0),
                 visible: true,
@@ -604,7 +688,7 @@
             id: (9),
             name: ("well_post_l"),
             transform: (
-                position: (-1.2, 14.4, 0.0),
+                position: (-1.2, 3.25, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -624,7 +708,7 @@
             id: (42),
             name: ("smoke_5a"),
             transform: (
-                position: (23.5, 7.787887, -6.0),
+                position: (23.5, 9.31026, -6.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -669,7 +753,7 @@
             id: (10),
             name: ("well_post_r"),
             transform: (
-                position: (1.2, 14.4, 0.0),
+                position: (1.2, 3.25, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -689,7 +773,7 @@
             id: (31),
             name: ("cottage_4_body"),
             transform: (
-                position: (-15.0, 14.15, -18.0),
+                position: (-15.0, 3.0, -18.0),
                 rotation_degrees: (-0.0, 45.000004, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -710,7 +794,7 @@
             id: (17),
             name: ("stall_2_counter"),
             transform: (
-                position: (-7.0, 13.3, 1.9),
+                position: (-7.0, 2.15, 1.9),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -731,7 +815,7 @@
             id: (8),
             name: ("well_inner"),
             transform: (
-                position: (0.0, 12.65, 0.0),
+                position: (0.0, 1.5, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -751,7 +835,7 @@
             id: (28),
             name: ("cottage_3_body"),
             transform: (
-                position: (12.0, 14.15, -20.0),
+                position: (12.0, 3.0, -20.0),
                 rotation_degrees: (0.0, -15.000002, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -772,7 +856,7 @@
             id: (54),
             name: ("pine_6"),
             transform: (
-                position: (-42.0, 14.0, -50.0),
+                position: (-42.0, 3.0, -50.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -792,7 +876,7 @@
             id: (68),
             name: ("pine_20"),
             transform: (
-                position: (-60.0, 15.0, -65.0),
+                position: (-60.0, 4.0, -65.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -809,10 +893,26 @@
             )),
         ),
         (
+            id: (112),
+            name: ("Path"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            material: Some((
+                color: (0.55, 0.4, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.85,
+                emissive: (0.0, 0.0, 0.0, 1.0),
+            )),
+        ),
+        (
             id: (16),
             name: ("stall_2_awning"),
             transform: (
-                position: (-7.0, 14.4, 1.8),
+                position: (-7.0, 3.25, 1.8),
                 rotation_degrees: (20.0, 0.0, 0.0),
                 scale: (3.0, 1.0, 1.5),
                 visible: true,
@@ -832,7 +932,7 @@
             id: (20),
             name: ("stall_3_counter"),
             transform: (
-                position: (1.9, 13.3, -7.0),
+                position: (1.9, 2.15, -7.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -850,10 +950,52 @@
             )),
         ),
         (
+            id: (82),
+            name: ("Sign_Leatherwor"),
+            transform: (
+                position: (1.5, 4.3, -7.0),
+                rotation_degrees: (-22.992695, 39.810364, 15.198887),
+                scale: (0.015, 0.015, 0.015),
+                visible: true,
+            ),
+        ),
+        (
+            id: (91),
+            name: ("gold_coin_4"),
+            transform: (
+                position: (-14.0, 2.2025032, -16.0),
+                rotation_degrees: (-180.0, -52.293823, -180.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.3,
+                height: 0.08,
+            )),
+            material: Some((
+                color: (1.0, 0.84, 0.0, 1.0),
+                metallic: 0.9,
+                roughness: 0.15,
+                emissive: (0.4, 0.3, 0.0, 1.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+                Spin(
+                    axis: (0.0, 1.0, 0.0),
+                    speed: 45.0,
+                ),
+            ],
+        ),
+        (
             id: (6),
             name: ("town_square_floor"),
             transform: (
-                position: (0.0, 12.15, 0.0),
+                position: (0.0, 1.0, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (20.0, 1.0, 20.0),
                 visible: true,
@@ -873,7 +1015,7 @@
             id: (18),
             name: ("stall_3"),
             transform: (
-                position: (3.0, 13.15, -7.0),
+                position: (3.0, 2.0, -7.0),
                 rotation_degrees: (0.0, 90.0, -0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -894,7 +1036,7 @@
             id: (30),
             name: ("cottage_3_chimney"),
             transform: (
-                position: (13.5, 18.4, -21.0),
+                position: (13.5, 7.25, -21.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -914,7 +1056,7 @@
             id: (40),
             name: ("smoke_3a"),
             transform: (
-                position: (13.5, 8.761075, -21.0),
+                position: (13.5, 9.777661, -21.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -939,10 +1081,42 @@
             ],
         ),
         (
+            id: (90),
+            name: ("gold_coin_3"),
+            transform: (
+                position: (16.0, 2.2025032, 5.0),
+                rotation_degrees: (-180.0, -52.293823, -180.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.3,
+                height: 0.08,
+            )),
+            material: Some((
+                color: (1.0, 0.84, 0.0, 1.0),
+                metallic: 0.9,
+                roughness: 0.15,
+                emissive: (0.4, 0.3, 0.0, 1.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+                Spin(
+                    axis: (0.0, 1.0, 0.0),
+                    speed: 45.0,
+                ),
+            ],
+        ),
+        (
             id: (51),
             name: ("pine_3"),
             transform: (
-                position: (-48.0, 17.0, 35.0),
+                position: (-48.0, 6.0, 35.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -962,7 +1136,7 @@
             id: (53),
             name: ("pine_5"),
             transform: (
-                position: (60.0, 18.0, -15.0),
+                position: (60.0, 7.0, -15.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -982,7 +1156,7 @@
             id: (59),
             name: ("pine_11"),
             transform: (
-                position: (70.0, 18.0, 5.0),
+                position: (70.0, 7.0, 5.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -999,10 +1173,52 @@
             )),
         ),
         (
+            id: (81),
+            name: ("Sign_Herbs & Po"),
+            transform: (
+                position: (-7.0, 4.3, 1.5),
+                rotation_degrees: (-28.849371, 52.234306, 23.532187),
+                scale: (0.015, 0.015, 0.015),
+                visible: true,
+            ),
+        ),
+        (
+            id: (92),
+            name: ("gold_coin_5"),
+            transform: (
+                position: (0.0, 6.2025037, 0.0),
+                rotation_degrees: (-180.0, -52.293823, -180.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            shape: Some(Cylinder(
+                radius: 0.3,
+                height: 0.08,
+            )),
+            material: Some((
+                color: (1.0, 0.84, 0.0, 1.0),
+                metallic: 0.9,
+                roughness: 0.15,
+                emissive: (0.4, 0.3, 0.0, 1.0),
+            )),
+            behaviors: [
+                Bob(
+                    axis: (0.0, 1.0, 0.0),
+                    amplitude: 0.2,
+                    frequency: 0.5,
+                    phase: 0.0,
+                ),
+                Spin(
+                    axis: (0.0, 1.0, 0.0),
+                    speed: 45.0,
+                ),
+            ],
+        ),
+        (
             id: (13),
             name: ("stall_1_awning"),
             transform: (
-                position: (7.0, 14.4, 1.8),
+                position: (7.0, 3.25, 1.8),
                 rotation_degrees: (20.0, 0.0, 0.0),
                 scale: (3.0, 1.0, 1.5),
                 visible: true,
@@ -1022,7 +1238,7 @@
             id: (7),
             name: ("well_base"),
             transform: (
-                position: (0.0, 12.65, 0.0),
+                position: (0.0, 1.5, 0.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1042,7 +1258,7 @@
             id: (37),
             name: ("smoke_1a"),
             transform: (
-                position: (19.5, 7.7863855, 9.0),
+                position: (19.5, 9.331267, 9.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1070,7 +1286,7 @@
             id: (57),
             name: ("pine_9"),
             transform: (
-                position: (48.0, 17.0, 48.0),
+                position: (48.0, 6.0, 48.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1090,7 +1306,7 @@
             id: (50),
             name: ("pine_2"),
             transform: (
-                position: (45.0, 15.0, -42.0),
+                position: (45.0, 4.0, -42.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1110,7 +1326,7 @@
             id: (63),
             name: ("pine_15"),
             transform: (
-                position: (42.0, 16.0, -60.0),
+                position: (42.0, 5.0, -60.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1130,7 +1346,7 @@
             id: (24),
             name: ("cottage_1_door"),
             transform: (
-                position: (17.5, 13.15, 5.92),
+                position: (17.5, 2.0, 5.92),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1151,7 +1367,7 @@
             id: (26),
             name: ("cottage_2_roof"),
             transform: (
-                position: (-18.0, 17.65, 12.0),
+                position: (-18.0, 6.5, 12.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1171,7 +1387,7 @@
             id: (36),
             name: ("cottage_5_chimney"),
             transform: (
-                position: (23.5, 18.4, -6.0),
+                position: (23.5, 7.25, -6.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1191,7 +1407,7 @@
             id: (67),
             name: ("pine_19"),
             transform: (
-                position: (50.0, 16.0, 65.0),
+                position: (50.0, 5.0, 65.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1211,7 +1427,7 @@
             id: (22),
             name: ("cottage_1_roof"),
             transform: (
-                position: (18.0, 17.65, 8.0),
+                position: (18.0, 6.5, 8.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1231,7 +1447,7 @@
             id: (27),
             name: ("cottage_2_chimney"),
             transform: (
-                position: (-16.5, 18.4, 13.0),
+                position: (-16.5, 7.25, 13.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1248,10 +1464,20 @@
             )),
         ),
         (
+            id: (80),
+            name: ("Sign_Bakery"),
+            transform: (
+                position: (7.0, 4.3, 1.5),
+                rotation_degrees: (-28.84936, 40.712807, 19.764347),
+                scale: (0.015, 0.015, 0.015),
+                visible: true,
+            ),
+        ),
+        (
             id: (58),
             name: ("pine_10"),
             transform: (
-                position: (-50.0, 15.0, 55.0),
+                position: (-50.0, 4.0, 55.0),
                 rotation_degrees: (0.0, 0.0, 0.0),
                 scale: (1.0, 1.0, 1.0),
                 visible: true,
@@ -1268,5 +1494,5 @@
             )),
         ),
     ],
-    next_entity_id: 71,
+    next_entity_id: 113,
 )
