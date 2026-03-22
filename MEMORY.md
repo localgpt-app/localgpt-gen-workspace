@@ -9,4 +9,3 @@ This file stores important, curated knowledge that persists across sessions.
 - Remove outdated information periodically
 
 ---
-

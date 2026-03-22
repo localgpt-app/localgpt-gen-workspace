@@ -1,0 +1,72 @@
+(
+    version: 1,
+    meta: (
+        name: "generated-snow-scene",
+        description: Some("A procedurally generated snow scene with directional light and wind ambience."),
+    ),
+    environment: Some((
+        background_color: Some((0.1255, 0.1255, 0.251, 1.0)),
+        ambient_intensity: Some(0.2),
+        ambient_color: Some((0.0196, 0.0196, 0.0627, 1.0)),
+    )),
+    camera: Some((
+        position: (0.0, 10.0, 10.0),
+        look_at: (0.0, 0.0, 0.0),
+        fov_degrees: 45.0,
+    )),
+    entities: [
+        (
+            id: (1),
+            name: ("main_light"),
+            transform: (
+                position: (0.0, 20.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (0.6667, 0.8667, 1.0, 1.0),
+                intensity: 0.3,
+                direction: Some((-0.5, -0.8, -0.2)),
+                shadows: true,
+            )),
+        ),
+        (
+            id: (2),
+            name: ("Terrain"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            material: Some((
+                color: (0.9, 0.9, 0.95, 1.0),
+                metallic: 0.1,
+                roughness: 0.9,
+                emissive: (0.0, 0.0, 0.0, 0.0),
+            )),
+        ),
+        (
+            id: (3),
+            name: ("ambience_wind_cold"),
+            transform: (
+                position: (0.0, 0.0, 0.0),
+                rotation_degrees: (0.0, 0.0, 0.0),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            audio: Some((
+                kind: ambient,
+                source: Wind(
+                    speed: 0.6,
+                    gustiness: 0.5,
+                ),
+                volume: 0.5,
+                rolloff: inverse_square,
+            )),
+        ),
+    ],
+    next_entity_id: 4,
+)
