@@ -1,0 +1,526 @@
+(
+    version: 1,
+    meta: (
+        name: "heart-outline",
+        description: Some("A heart outline formed by 24 alternating pink cuboids and red spheres arranged in a classic heart shape. The outline floats in space against a neutral background, lit by a directional light. Bright pink cubes (color 1.0, 0.3, 0.45) alternate with deeper red spheres (1.0, 0.1, 0.25) to trace the heart\'s curves and point, creating a cheerful, valentine-style display."),
+        bevy_version: Some("0.18"),
+        compliance: Some((
+            steam_code_tool_exempt: true,
+            eu_ai_act_risk_level: "minimal",
+            no_gen_ai_compatible: true,
+            generation_tool: "LocalGPT Gen v0.3.6",
+            generation_method: "code-generation",
+            human_modifiable: true,
+        )),
+    ),
+    environment: Some((
+        background_color: Some((0.16862746, 0.17254902, 0.18431373, 1.0)),
+        ambient_intensity: Some(300.0),
+        ambient_color: Some((0.53, 0.81, 0.92, 1.0)),
+    )),
+    camera: Some((
+        position: (0.0, 2.6, 8.0),
+        look_at: (-0.56968194, 2.6600006, -1.9835892),
+        fov_degrees: 45.0,
+    )),
+    entities: [
+        (
+            id: (21),
+            name: ("heart_17_cube"),
+            transform: (
+                position: (-2.163, 2.78, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (22),
+            name: ("heart_18_sphere"),
+            transform: (
+                position: (-2.4, 3.6, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (26),
+            name: ("heart_22_sphere"),
+            transform: (
+                position: (-0.3, 4.389, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (9),
+            name: ("heart_05_cube"),
+            transform: (
+                position: (2.163, 4.369, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (4),
+            name: ("heart_00_sphere"),
+            transform: (
+                position: (0.0, 3.75, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (7),
+            name: ("heart_03_cube"),
+            transform: (
+                position: (0.849, 4.741, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (10),
+            name: ("heart_06_sphere"),
+            transform: (
+                position: (2.4, 3.6, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (18),
+            name: ("heart_14_sphere"),
+            transform: (
+                position: (-0.3, 1.011, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (15),
+            name: ("heart_11_cube"),
+            transform: (
+                position: (0.042, 0.604, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (11),
+            name: ("heart_07_cube"),
+            transform: (
+                position: (2.163, 2.78, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (19),
+            name: ("heart_15_cube"),
+            transform: (
+                position: (-0.849, 1.559, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (20),
+            name: ("heart_16_sphere"),
+            transform: (
+                position: (-1.559, 2.175, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (6),
+            name: ("heart_02_sphere"),
+            transform: (
+                position: (0.3, 4.389, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (12),
+            name: ("heart_08_sphere"),
+            transform: (
+                position: (1.559, 2.175, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (23),
+            name: ("heart_19_cube"),
+            transform: (
+                position: (-2.163, 4.369, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (24),
+            name: ("heart_20_sphere"),
+            transform: (
+                position: (-1.559, 4.725, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (5),
+            name: ("heart_01_cube"),
+            transform: (
+                position: (0.042, 3.947, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (17),
+            name: ("heart_13_cube"),
+            transform: (
+                position: (-0.042, 0.604, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (25),
+            name: ("heart_21_cube"),
+            transform: (
+                position: (-0.849, 4.741, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (27),
+            name: ("heart_23_cube"),
+            transform: (
+                position: (-0.042, 3.947, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (14),
+            name: ("heart_10_sphere"),
+            transform: (
+                position: (0.3, 1.011, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (13),
+            name: ("heart_09_cube"),
+            transform: (
+                position: (0.849, 1.559, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.3, 0.3, 0.3),
+                visible: true,
+            ),
+            shape: Some(Cuboid(
+                x: 1.0,
+                y: 1.0,
+                z: 1.0,
+            )),
+            material: Some((
+                color: (1.0, 0.3, 0.45, 1.0),
+                metallic: 0.0,
+                roughness: 0.5,
+                emissive: (0.3, 0.02, 0.08, 1.0),
+            )),
+        ),
+        (
+            id: (3),
+            name: ("main_light"),
+            transform: (
+                position: (4.0, 8.0, 4.0),
+                rotation_degrees: (-63.43495, 24.094845, 39.23152),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (1.0, 0.95, 0.9, 1.0),
+                intensity: 10000.0,
+                direction: Some((-0.4082483, -0.8164966, -0.40824834)),
+                shadows: true,
+            )),
+        ),
+        (
+            id: (8),
+            name: ("heart_04_sphere"),
+            transform: (
+                position: (1.559, 4.725, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.22, 0.22, 0.22),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.35,
+                emissive: (0.6, 0.02, 0.1, 1.0),
+            )),
+        ),
+        (
+            id: (16),
+            name: ("heart_12_sphere"),
+            transform: (
+                position: (0.0, 0.45, 0.0),
+                rotation_degrees: (-0.0, 0.0, -0.0),
+                scale: (0.28, 0.28, 0.28),
+                visible: true,
+            ),
+            shape: Some(Sphere(
+                radius: 0.5,
+            )),
+            material: Some((
+                color: (1.0, 0.1, 0.25, 1.0),
+                metallic: 0.0,
+                roughness: 0.3,
+                emissive: (0.8, 0.03, 0.12, 1.0),
+            )),
+        ),
+    ],
+    next_entity_id: 28,
+)

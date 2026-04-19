@@ -1,0 +1,46 @@
+(
+    version: 1,
+    meta: (
+        name: "medieval-village",
+        description: Some("Cozy medieval fantasy village with NPC quest, medallions, doors, market square at sunset."),
+        bevy_version: Some("0.18"),
+        compliance: Some((
+            steam_code_tool_exempt: true,
+            eu_ai_act_risk_level: "minimal",
+            no_gen_ai_compatible: true,
+            generation_tool: "LocalGPT Gen v0.3.6",
+            generation_method: "code-generation",
+            human_modifiable: true,
+        )),
+    ),
+    environment: Some((
+        background_color: Some((0.16862746, 0.17254902, 0.18431373, 1.0)),
+        ambient_intensity: Some(300.0),
+        ambient_color: Some((0.53, 0.81, 0.92, 1.0)),
+    )),
+    camera: Some((
+        position: (5.0, 5.0, 5.0),
+        look_at: (-0.77350235, -0.77350235, -0.7735033),
+        fov_degrees: 45.0,
+    )),
+    entities: [
+        (
+            id: (3),
+            name: ("main_light"),
+            transform: (
+                position: (4.0, 8.0, 4.0),
+                rotation_degrees: (-63.43495, 24.094845, 39.23152),
+                scale: (1.0, 1.0, 1.0),
+                visible: true,
+            ),
+            light: Some((
+                light_type: directional,
+                color: (1.0, 0.95, 0.9, 1.0),
+                intensity: 10000.0,
+                direction: Some((-0.4082483, -0.8164966, -0.40824834)),
+                shadows: true,
+            )),
+        ),
+    ],
+    next_entity_id: 4,
+)
